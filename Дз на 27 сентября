@@ -1,5 +1,5 @@
 a=int(input())
-b==int(input())
+b=int(input())
 s=t=0
 for i in range(a, b+1):
         for j in range(2, round(i/2)+1):
