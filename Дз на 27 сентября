@@ -1,1 +1,13 @@
-
+a=int(input())
+b==int(input())
+s=t=0
+for i in range(a, b+1):
+        for j in range(2, round(i/2)+1):
+                if  i%j==0:
+                        s+=1
+                        if  t==0:
+                                t=j
+                        w=j
+        if  s==3:
+                print(str(i)+'('+str(i)+str(w)+str(t)+'1)')
+        s=0
