@@ -1,9 +1,18 @@
 import sympy
 a=int(input())
 b=int(input())
+s=0
 list_pr=list(sympy.primerange(1, b**(1/2)+1))
 for i in range(a, b+1):
     for j in list_pr:
         if  i%j==0:
             if  1/j in list_pr and j!=i/j:
-                
+                s=1
+                e=j
+                w=1/j
+            if  j*j*j==i:
+                s=1
+                e=j
+                w=j*j
+    if  s==1:
+        print(str(i)+'('+str(i)+','+str(w)+','+str(e)+'1)')
