@@ -1,12 +1,13 @@
+import math
 a=int(input())
 b=int(input())
-s=e=0
+s=n1=0
 for i in range(a, b+1):
-    for j in range(2, int(round(i**(1/2),6))+1):
+    for j in range(2, int(math.isqrt(i))+1):
         if  i%j==0 and s<2:
             s+=1
-            e=j
-            w=int(i/j)
-    if  s==1 and e!=w and i**(1/2)%1!=0:
-        print(str(i)+'('+str(i)+','+str(w)+','+str(e)+','+'1)')
+            n1=j
+            n2=i/j
+    if  s==1 and n2%1==0 and n1!=n2:
+        print(str(i)+'('+str(i)+','+str(n2)+','+str(n1)+','+'1)')
     s=0
