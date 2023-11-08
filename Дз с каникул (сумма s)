@@ -1,0 +1,19 @@
+s=int(input())
+a=[int(i) for i in input().split()]
+def f(n):
+		low=-1
+		while low+1<h:
+			mit=(low+h)//2
+			g=a[mit]
+		if  g>n:
+			h=mit
+		else:
+			low=mit
+		if  a[low]==n:
+			return low
+		return -1
+for k in a:
+	n = s-k
+	i= f(n)
+    if i > 0:
+    	print(k, a[i])
