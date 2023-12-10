@@ -1,0 +1,46 @@
+k=True
+while k==True:
+  index=int(input())
+  if  index<1 or index>12:
+    print('Пожалуйста, введите целое число от 1 до 12')
+  else:
+    k=False
+    def month(i):
+      if  i<8:
+        if  i%2==0:
+          number=30
+        else:
+          number=31
+      else:
+        if  i%2==0:
+          number=31
+        else:
+          number=30
+      if  i==2:
+        number=28
+      if  i==1:
+        title='январь'
+      elif i==2:
+        title='февраль'
+      elif i==3:
+        title='март'
+      elif i==4:
+        title='апрель'
+      elif i==5:
+        title='май'
+      elif i==6:
+        title='июнь'
+      elif i==7:
+        title='июль'
+      elif i==8:
+        title='август'
+      elif i==9:
+        title='сентябрь'
+      elif i==10:
+        title='октябрь'
+      elif i==11:
+        title='ноябрь'
+      elif i==12:
+        title='декабрь'
+      return title, number
+    print(month(index))
