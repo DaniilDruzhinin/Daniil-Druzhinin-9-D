@@ -1,0 +1,26 @@
+import math
+k=True
+l=True
+while k==True:
+    while l==True:
+        a=input()
+        b=input()
+        c=input()
+        try:
+            a=float(a)
+            b=float(b)
+            c=float(c)
+            l=False
+        except ValueError:
+            print('Пожалуйста введите корректные стороны треугольника')
+    list1=[a,b,c]
+    list1.sort()
+    if  list1[0]+list1[1]<=list1[2]:
+        print('Пожалуйста введите корректные стороны треугольника')
+        l=True
+    else:
+        k=False
+p=round(a+b+c,2)
+s=round(math.sqrt(p/2*(p/2-a)*(p/2-b)*(p/2-c)),2)
+print('Периметр – '+str(p))
+print('Площадь – '+str(s))
